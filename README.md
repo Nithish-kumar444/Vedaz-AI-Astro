@@ -1,5 +1,4 @@
-# 🌟 Vedaz-AI-Astro - 
-AI Dataset Engineering Pipeline
+# 🌟 Vedaz-AI-Astro - AI Dataset Engineering Pipeline
 
 ## 📌 Overview
 
@@ -259,6 +258,64 @@ The pipeline is designed to:
 - Split datasets for machine learning
 - Evaluate AI responses using an LLM Judge
 - Produce detailed analytical reports
+
+---
+
+# ⚠️ Limitations
+
+Although this project demonstrates a complete AI dataset engineering workflow, it has several limitations due to infrastructure, API, and implementation constraints.
+
+## 🔑 1. API Rate Limits
+
+- Uses OpenRouter free-tier models.
+- Free-tier APIs enforce strict request-per-minute and daily request limits.
+- Large-scale dataset generation or evaluation may trigger **HTTP 429 (Rate Limit Exceeded)** errors.
+
+---
+
+## ⏳ 2. Processing Speed
+
+- Dataset generation and evaluation rely on external LLM API calls.
+- Overall execution speed depends on network latency and model response time.
+- Processing large datasets can therefore take considerable time.
+
+---
+
+## 🤖 3. Model Dependency
+
+- Output quality depends on the selected OpenRouter model (e.g., `openai/gpt-oss-20b:free`).
+- Different models may generate responses with varying quality, consistency, and evaluation scores.
+
+---
+
+## 🧠 4. Rule-Based Safety System
+
+- The safety checker primarily uses Regex-based pattern matching.
+- It may fail to detect cleverly paraphrased unsafe responses or indirect harmful intent.
+- Future versions could incorporate LLM-based safety classification for improved detection accuracy.
+
+---
+
+## 📊 5. Evaluation Subjectivity
+
+- Response evaluation is performed by another LLM rather than human experts.
+- Scores for Safety, Helpfulness, Honesty, and Warmth are approximate and may vary slightly across different runs.
+
+---
+
+## 💾 6. Local File-Based Storage
+
+- The project stores datasets locally using JSONL and CSV files.
+- It does not currently support relational databases or cloud storage platforms.
+- Collaborative dataset management is therefore limited.
+
+---
+
+## 🔄 7. Non-Deterministic Outputs
+
+- LLM generation uses temperature-based sampling.
+- The same prompt may produce different conversations in different executions.
+- Complete reproducibility cannot always be guaranteed.
 
 ---
 
