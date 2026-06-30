@@ -1,0 +1,29 @@
+VEDAZ AI ENGINEER - DATASET REPORT
+==================================================
+
+VALIDATION
+--------------------
+Valid Chats   : 15
+Invalid Chats : 0
+
+STATISTICS
+--------------------
+Total Conversations : 15
+Total Messages      : 49
+Average Messages    : 3.27
+Average Words       : 230.6
+Shortest Chat       : 169 words
+Longest Chat        : 300 words
+
+DUPLICATES
+--------------------
+Duplicate Pairs Found : 0
+
+SAFETY CHECK
+--------------------
+Unsafe Conversations : 0
+
+TRAIN / TEST SPLIT
+--------------------
+Training Chats : 12
+Testing Chats  : 3
